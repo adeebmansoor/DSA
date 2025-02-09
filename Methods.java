@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Methods {
 
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         // System.out.print("Enter the Number: ");
         // int n = sc.nextInt();
         // isPrime(n);
@@ -17,7 +17,7 @@ public class Methods {
                 System.out.println(i);
             }
         }
-        // sc.close();
+        sc.close();
     }
 
     // Ques1. Check if a given no. is prime or not?
