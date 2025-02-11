@@ -1,8 +1,8 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 public class Methods {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
         // System.out.print("Enter the Number: ");
         // int n = sc.nextInt();
         // isPrime(n);
@@ -12,12 +12,12 @@ public class Methods {
         // System.out.println("It is not an Armstrong number");
 
         // Print all 3 digits Armstrong numbers?
-        for (int i=100; i<=999; i++){
-            if( isArmstrong(i)){
-                System.out.println(i);
-            }
-        }
-        sc.close();
+        // for (int i=100; i<=999; i++){
+        //     if( isArmstrong(i)){
+        //         System.out.println(i);
+        //     }
+        // }
+        // sc.close();
     }
 
     // Ques1. Check if a given no. is prime or not?
@@ -36,17 +36,17 @@ public class Methods {
 
 
     // Ques2. Check if a given no. is Armstrong number or not?
-    static boolean isArmstrong(int n){
-        int original = n;
-        int sum = 0;
+    // static boolean isArmstrong(int n){
+    //     int original = n;
+    //     int sum = 0;
 
-        while (n > 0) {
-            int rem = n % 10;
-            n = n / 10;
-            sum = sum + (rem * rem * rem);
-        }
-        return sum == original;
-    }
+    //     while (n > 0) {
+    //         int rem = n % 10;
+    //         n = n / 10;
+    //         sum = sum + (rem * rem * rem);
+    //     }
+    //     return sum == original;
+    // }
 }
 
 

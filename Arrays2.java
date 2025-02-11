@@ -1,20 +1,20 @@
-import java.util.Arrays;
-import java.util.Scanner;
+// import java.util.Arrays;
+// import java.util.Scanner;
 public class Arrays2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the no. of rows of array: ");
-        int row = sc.nextInt();
-        System.out.print("Enter the no. of columns of array: ");
-        int col = sc.nextInt();
-        // Input
-        int [][] arr = new int[row][col];
-        System.out.print("Enter the elements of array: ");
-        for (int i=0; i<row; i++){
-            for(int j=0; j<col; j++){
-                arr[i][j] = sc.nextInt();
-            }
-        }
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("Enter the no. of rows of array: ");
+        // int row = sc.nextInt();
+        // System.out.print("Enter the no. of columns of array: ");
+        // int col = sc.nextInt();
+        // // Input
+        // int [][] arr = new int[row][col];
+        // System.out.print("Enter the elements of array: ");
+        // for (int i=0; i<row; i++){
+        //     for(int j=0; j<col; j++){
+        //         arr[i][j] = sc.nextInt();
+        //     }
+        // }
 
         // Output
         // 1st method:
