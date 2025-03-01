@@ -1,5 +1,5 @@
 import java.util.*;
-public class ArrayList {
+public class arrayList {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         // ArrayList<Integer> list = new ArrayList<>(10);
