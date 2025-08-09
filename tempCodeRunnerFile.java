@@ -1,1 +1,2 @@
-arr
+
+        list.displayBackward();
