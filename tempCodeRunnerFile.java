@@ -1,2 +1,2 @@
-
-        list.displayBackward();
+());
+        // System.out.println(list.deleteLast());
