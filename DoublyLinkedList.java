@@ -91,6 +91,26 @@ public class DoublyLinkedList {
             tail = node;
         }
     }
+
+    public void insertAfter(int after, int val) {
+        Node prev = find(after);
+        if (prev == null) {
+            System.out.println("Node Not Found!");
+            return;
+        }
+
+        Node node = new Node(val);
+        node.next = prev.next;
+        node.prev = prev;
+        prev.next = node;
+        
+        if (node.next != null) {
+            node.next.prev = node;
+        }
+        else {
+            tail = node; // update tail
+        }
+    }
     
     public void displayForward() {
         Node temp = head;
@@ -122,6 +142,7 @@ public class DoublyLinkedList {
         list.insertLast(99);
         list.insertLast(101);
         list.insert(178, 4);
+        list.insertAfter(99, 4);
 
         list.displayForward();
         System.out.println();
