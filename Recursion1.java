@@ -1,4 +1,4 @@
-public class RecursionIntro {
+public class Recursion1 {
     // Non recursive way
     // public static void main(String[] args) {
     //     print1(1);

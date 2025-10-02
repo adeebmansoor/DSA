@@ -5,6 +5,7 @@ public class Recursion2 {
         // func2(5);
         // System.out.println();
         // System.out.println(sum(5));
+        // System.out.println(prod(5));
         // System.out.println(factorial(4));
         // System.out.println(fibonacci(8));
         // int ans = sumDigits(1342);
@@ -16,8 +17,8 @@ public class Recursion2 {
         // System.out.println(sum);
         // boolean ans = palin(9811);
         // System.out.println(ans);
-        int zero = count(1000);
-        System.out.println(zero);
+        // int zero = count(1000);
+        // System.out.println(zero);
     }
 
     // static void func(int n) {
@@ -34,7 +35,6 @@ public class Recursion2 {
     // }
     // func2(n - 1);
     // System.out.print(n + " ");
-
     // }
 
     // static int sum(int n) {
@@ -42,6 +42,13 @@ public class Recursion2 {
     // return 1;
     // }
     // return n + sum(n - 1);
+    // }
+
+    // static int prod(int n) {
+    // if (n <= 1) {
+    // return 1;
+    // }
+    // return n * prod(n - 1);
     // }
 
     // static int factorial(int f) {
@@ -108,18 +115,18 @@ public class Recursion2 {
     //     return n == rev2(n);
     // }
 
-    static int helper(int n, int c) {
-        if (n == 0) {
-            return c;
-        }
-        int rem = n % 10;
-        if (rem == 0) {
-            return helper(n/10, c+1);
-        }
-        return helper(n/10, c);
-    }
+    // static int helper(int n, int c) {
+    //     if (n == 0) {
+    //         return c;
+    //     }
+    //     int rem = n % 10;
+    //     if (rem == 0) {
+    //         return helper(n/10, c+1);
+    //     }
+    //     return helper(n/10, c);
+    // }
 
-    static int count (int n) {
-        return helper(n, 0);
-    }
+    // static int count (int n) {
+    //     return helper(n, 0);
+    // }
 }
