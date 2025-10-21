@@ -9,7 +9,10 @@ public class RecursionArray {
         // System.out.println(linearSearchIndex(arr, 0, 78));
         // linearSearchAllIndex(arr, 0, 78);
         // System.out.println(list);
-        System.out.println(linearSearchAllIndex(arr, 0, 6, new ArrayList<>()));
+        // System.out.println(linearSearchAllIndex(arr, 0, 6, new ArrayList<>()));
+        int n = arr.length;
+        System.out.println(n);
+        System.out.println(7 ^ 2);
     }
 
     // Ques1. check array is sorted.
@@ -53,13 +56,13 @@ public class RecursionArray {
     // }
 
     // Ques5. linear search in array find all the indices of the repeated elements returning an arraylist.
-    static ArrayList<Integer> linearSearchAllIndex(int[] arr, int index, int target, ArrayList<Integer> list) {
-        if (index == arr.length) {
-            return list;
-        }
-        if (arr[index] == target) {
-            list.add(index);
-        }
-        return linearSearchAllIndex(arr, index + 1, target, list);
-    }
+    // static ArrayList<Integer> linearSearchAllIndex(int[] arr, int index, int target, ArrayList<Integer> list) {
+    //     if (index == arr.length) {
+    //         return list;
+    //     }
+    //     if (arr[index] == target) {
+    //         list.add(index);
+    //     }
+    //     return linearSearchAllIndex(arr, index + 1, target, list);
+    // }
 }
