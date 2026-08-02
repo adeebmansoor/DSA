@@ -1,2 +1,1 @@
-());
-        // System.out.println(list.deleteLast());
+s
