@@ -7,7 +7,10 @@ public class RecursionSubsequence {
         // System.out.println(list);
         // subsequence2("", "abc", list2);
         // System.out.println(list2);
-        System.out.println(subsequence3("", "abc"));
+        // System.out.println(subsequence3("", "abc"));
+        // subsequenceASCII("", "ab");
+        // System.out.println(list4);
+        System.out.println(subsequenceAsciiRet("", "abc"));
     }
 
     // Method1
@@ -36,18 +39,51 @@ public class RecursionSubsequence {
     // }
 
     // Method3
-    static ArrayList<String> subsequence3(String s, String p) {
+    // static ArrayList<String> subsequence3(String s, String p) {
+    //     if (p.isEmpty()) {
+    //         ArrayList <String> list3 = new ArrayList<>();
+    //         list3.add(s);
+    //         return list3;
+    //     }
+
+    //     char ch = p.charAt(0);
+    //     ArrayList<String> left =  subsequence3(s + ch, p.substring(1));
+    //     ArrayList<String> right = subsequence3(s, p.substring(1));
+
+    //     left.addAll(right);
+    //     return left;
+    // }
+
+    // Subsequence and ASCII value
+    // Method1
+    // static ArrayList<String> list4 = new ArrayList<>();
+    // static void subsequenceASCII(String s, String p) {
+    //     if (p.isEmpty()) {
+    //         list4.add(s);
+    //         return;
+    //     }
+
+    //     char ch = p.charAt(0);
+    //     subsequenceASCII(s + ch, p.substring(1));
+    //     subsequenceASCII(s, p.substring(1));
+    //     subsequenceASCII(s + (ch + 0), p.substring(1));
+    // }
+
+    // Method2
+    static ArrayList<String> subsequenceAsciiRet(String s, String p) {
         if (p.isEmpty()) {
-            ArrayList <String> list3 = new ArrayList<>();
-            list3.add(s);
-            return list3;
+            ArrayList <String> list4 = new ArrayList<>();
+            list4.add(s);
+            return list4;
         }
 
         char ch = p.charAt(0);
-        ArrayList<String> left =  subsequence3(s + ch, p.substring(1));
-        ArrayList<String> right = subsequence3(s, p.substring(1));
+        ArrayList<String> first =  subsequenceAsciiRet(s + ch, p.substring(1));
+        ArrayList<String> second = subsequenceAsciiRet(s, p.substring(1));
+        ArrayList<String> third = subsequenceAsciiRet(s + (ch + 0), p.substring(1));
 
-        left.addAll(right);
-        return left;
+        first.addAll(second);
+        first.addAll(third);
+        return first;
     }
 }
