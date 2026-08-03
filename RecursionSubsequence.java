@@ -10,7 +10,10 @@ public class RecursionSubsequence {
         // System.out.println(subsequence3("", "abc"));
         // subsequenceASCII("", "ab");
         // System.out.println(list4);
-        System.out.println(subsequenceAsciiRet("", "abc"));
+        // System.out.println(subsequenceAsciiRet("", "abc"));
+        // System.out.println(subsequence3("", "abc"));
+        // dice("", 4);
+        System.out.println(dice2("", 4));
     }
 
     // Method1
@@ -70,20 +73,61 @@ public class RecursionSubsequence {
     // }
 
     // Method2
-    static ArrayList<String> subsequenceAsciiRet(String s, String p) {
-        if (p.isEmpty()) {
-            ArrayList <String> list4 = new ArrayList<>();
-            list4.add(s);
-            return list4;
+    // static ArrayList<String> subsequenceAsciiRet(String s, String p) {
+    //     if (p.isEmpty()) {
+    //         ArrayList <String> list4 = new ArrayList<>();
+    //         list4.add(s);
+    //         return list4;
+    //     }
+
+    //     char ch = p.charAt(0);
+    //     ArrayList<String> first =  subsequenceAsciiRet(s + ch, p.substring(1));
+    //     ArrayList<String> second = subsequenceAsciiRet(s, p.substring(1));
+    //     ArrayList<String> third = subsequenceAsciiRet(s + (ch + 0), p.substring(1));
+
+    //     first.addAll(second);
+    //     first.addAll(third);
+    //     return first;
+    // }
+
+    // Return count Subsequences
+    // static int subsequence3(String s, String p) {
+    //     if (p.isEmpty()) {
+    //         return 1;
+    //     }
+
+    //     int left = 0, right = 0;
+    //     char ch = p.charAt(0);
+    //     left += subsequence3(s + ch, p.substring(1));
+    //     right += subsequence3(s, p.substring(1));
+
+    //     return left + right;
+    // }
+
+    // Ques: Dice possibility of drawing 4
+    // static void dice(String p, int target) {
+    //     if (target == 0) {
+    //         System.out.println(p);
+    //         return;
+    //     }
+
+    //     for (int i = 1; i <= 6 && i <= target; i++) {
+    //         dice(p + i, target - i);
+    //     }
+    // }
+
+    // Method 2
+    static ArrayList<String> dice2(String p, int target) {
+        if (target == 0) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
         }
 
-        char ch = p.charAt(0);
-        ArrayList<String> first =  subsequenceAsciiRet(s + ch, p.substring(1));
-        ArrayList<String> second = subsequenceAsciiRet(s, p.substring(1));
-        ArrayList<String> third = subsequenceAsciiRet(s + (ch + 0), p.substring(1));
-
-        first.addAll(second);
-        first.addAll(third);
-        return first;
+        ArrayList<String> four = new ArrayList<>();
+        for (int i = 1; i <= 6 && i <= target; i++) {
+            four.addAll(dice2(p + i, target - i));
+        }
+        return four;
     }
 }
