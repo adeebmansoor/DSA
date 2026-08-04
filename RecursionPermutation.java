@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class RecursionPermutation {
     public static void main(String[] args) {
         // permutation("", "abc");
-        System.out.println(permutation1("", "abc"));
+        // System.out.println(permutation1("", "abc"));
     }
 
     // Method 1
