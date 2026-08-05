@@ -38,6 +38,7 @@ public class RecursionBacktracking {
             backtracking(p + "U", r-1, c, maze);
         }
 
+        // this line is where the function gets over hence before function gets removed, changes made by this function should also be removed
         maze[r][c] = true;
     }
 
@@ -54,6 +55,7 @@ public class RecursionBacktracking {
             return list;
         }
 
+        // Cell in the current path is turned false
         maze[r][c] = false;
 
         if (r < maze.length-1) {
